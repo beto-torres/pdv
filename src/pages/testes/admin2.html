@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin PDV</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .bg-pdv {
+            background-color: #042e61;
+        }
+    </style>
+</head>
+
+<body class="flex h-screen text-white">
+
+    <!-- Sidebar -->
+    <aside class="w-64 bg-pdv flex flex-col border-r border-gray-500">
+        <div class="p-6 text-2xl font-bold border-b border-gray-500 flex items-center justify-center">
+            PDV Dashboard
+        </div>
+        <nav class="flex-1 p-4 space-y-2">
+            <a href="#" class="block py-2 px-4 rounded hover:bg-white hover:text-[#0c2d55] transition">Dashboard</a>
+            <a href="#" class="block py-2 px-4 rounded hover:bg-white hover:text-[#0c2d55] transition">Produtos</a>
+            <a href="#" class="block py-2 px-4 rounded hover:bg-white hover:text-[#0c2d55] transition">Vendas</a>
+            <a href="#" class="block py-2 px-4 rounded hover:bg-white hover:text-[#0c2d55] transition">Caixa</a>
+            <a href="#" class="block py-2 px-4 rounded hover:bg-white hover:text-[#0c2d55] transition">Usuários</a>
+            <a href="#" class="block py-2 px-4 rounded hover:bg-white hover:text-[#0c2d55] transition">Configurações</a>
+        </nav>
+        <div class="p-4 border-t border-white text-sm">
+            Versão 1.0.0
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="flex-1 flex flex-col bg-pdv">
+        <!-- Header -->
+        <header class="bg-pdv pb-6 p-4 shadow flex items-center justify-between border-b border-gray-500">
+            <h1 class="text-xl font-semibold flex items-center">
+                Painel de Controle
+            </h1>
+            <span class="text-sm">
+                Usuário:
+                <code class="text-amber-500">
+                    admin
+                </code>
+                <div class="text-right">
+                    <a href="#" class="hover:underline">Sair</a>
+                </div>
+            </span>
+
+        </header>
+
+        <!-- Content Area -->
+        <main class="p-6 overflow-y-auto flex-1">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+                <!-- Card -->
+                <div class="bg-pdv p-4 rounded-sm border border-gray-500 shadow">
+                    <h2 class="font-bold text-lg mb-2">Total de Vendas</h2>
+                    <p class="text-2xl font-semibold">R$ 5.820,00</p>
+                </div>
+                <div class="bg-pdv p-4 rounded-sm border border-gray-500 shadow">
+                    <h2 class="font-bold text-lg mb-2">Produtos Ativos</h2>
+                    <p class="text-2xl">128</p>
+                </div>
+                <div class="bg-pdv p-4 rounded-sm border border-gray-500 shadow">
+                    <h2 class="font-bold text-lg mb-2">Usuários Online</h2>
+                    <p class="text-2xl">3</p>
+                </div>
+                <div class="bg-pdv p-4 rounded-sm border border-gray-500 shadow">
+                    <h2 class="font-bold text-lg mb-2">Lucro / Abril</h2>
+                    <p class="text-2xl font-semibold text-green-600">R$ 3.850,15</p>
+                </div>
+            </div>
+
+            <!-- Tabela -->
+            <div class="mt-8 bg-pdv rounded-s-sm border border-gray-500 shadow p-4">
+                <h3 class="text-lg font-semibold mb-4">Últimas movimentações</h3>
+                <table class="w-full text-left text-sm border border-gray-500">
+                    <thead>
+                        <tr class="border-b border-gray-500">
+                            <th class="w-[15%] p-2 border-r border-gray-500">Data</th>
+                            <th class="p-2 border-r border-gray-500">Operação</th>
+                            <th class="p-2 border-r border-gray-500">Valor</th>
+                            <th class="p-2 border-r border-gray-500"">Caixa</th>
+                            <th class=" p-2">Usuário</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-t border-gray-500">
+                            <td class="p-2 border-r border-gray-500">15/04/2025 07:03:35</td>
+                            <td class="p-2 border-r border-gray-500">Abertura</td>
+                            <td class="p-2 border-r border-gray-500">R$ 0,00</td>
+                            <td class="p-2 border-r border-gray-500">Caixa 01</td>
+                            <td class="p-2">Fernandinha</td>
+                        </tr>
+                        <tr class="border-t border-gray-500">
+                            <td class="p-2 border-r border-gray-500">15/04/2025 07:10:56</td>
+                            <td class="p-2 border-r border-gray-500">Venda</td>
+                            <td class="p-2 border-r border-gray-500">R$ 120,00</td>
+                            <td class="p-2 border-r border-gray-500">Caixa 01</td>
+                            <td class="p-2">Fernandinha</td>
+                        </tr>
+                        <tr class="border-t border-gray-500">
+                            <td class="p-2 border-r border-gray-500">15/04/2025 07:05:12</td>
+                            <td class="p-2 border-r border-gray-500">Abertura</td>
+                            <td class="p-2 border-r border-gray-500">R$ 0,00</td>
+                            <td class="p-2 border-r border-gray-500">Caixa 02</td>
+                            <td class="p-2">Milena</td>
+                        </tr>
+                        <tr class="border-t border-gray-500">
+                            <td class="p-2 border-r border-gray-500">15/04/2025 07:06:25</td>
+                            <td class="p-2 border-r border-gray-500">Abertura</td>
+                            <td class="p-2 border-r border-gray-500">R$ 0,00</td>
+                            <td class="p-2 border-r border-gray-500">Caixa 03</td>
+                            <td class="p-2">Júlia</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

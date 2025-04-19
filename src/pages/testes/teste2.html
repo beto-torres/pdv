@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDV Mercadinho</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 font-sans">
+
+    <!-- Cabeçalho -->
+    <header class="bg-blue-600 text-white p-4 flex justify-between items-center">
+        <div>
+            <h1 class="text-xl font-bold">Mercadinho do Beto</h1>
+            <p class="text-sm">Sistema PDV v1.0</p>
+        </div>
+        <div class="text-right">
+            <p class="text-sm">Operador: João</p>
+            <p class="text-sm">Data: <span id="current-date"></span></p>
+        </div>
+    </header>
+
+    <!-- Corpo -->
+    <main class="flex flex-col md:flex-row mt-4 mx-4 gap-4">
+
+        <!-- Coluna da Esquerda: Produtos -->
+        <section class="bg-white p-4 rounded-lg shadow-md flex-1">
+            <h2 class="text-lg font-semibold mb-4">Produtos</h2>
+            <div class="overflow-y-auto max-h-96">
+                <div class="flex justify-between items-center border-b py-2">
+                    <span>Código: 12345</span>
+                    <button class="bg-green-500 text-white px-2 py-1 rounded">Adicionar</button>
+                </div>
+                <div class="flex justify-between items-center border-b py-2">
+                    <span>Código: 67890</span>
+                    <button class="bg-green-500 text-white px-2 py-1 rounded">Adicionar</button>
+                </div>
+                <!-- Repetir conforme necessário -->
+            </div>
+            <div class="mt-4">
+                <input type="text" placeholder="Buscar por código..." class="w-full p-2 border rounded">
+            </div>
+        </section>
+
+        <!-- Coluna da Direita: Carrinho -->
+        <section class="bg-white p-4 rounded-lg shadow-md flex-1">
+            <h2 class="text-lg font-semibold mb-4">Carrinho</h2>
+            <div class="overflow-y-auto max-h-96">
+                <div class="flex justify-between items-center border-b py-2">
+                    <span>Produto A (x1)</span>
+                    <span>R$ 10,00</span>
+                </div>
+                <div class="flex justify-between items-center border-b py-2">
+                    <span>Produto B (x2)</span>
+                    <span>R$ 20,00</span>
+                </div>
+                <!-- Repetir conforme necessário -->
+            </div>
+            <div class="mt-4">
+                <div class="flex justify-between font-bold">
+                    <span>Total:</span>
+                    <span>R$ 30,00</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="fixed bottom-0 left-0 right-0 bg-gray-800 text-white p-4 flex justify-around items-center">
+        <button class="bg-red-500 px-4 py-2 rounded">Cancelar</button>
+        <button class="bg-blue-500 px-4 py-2 rounded">Finalizar Venda</button>
+        <button class="bg-yellow-500 px-4 py-2 rounded">Imprimir Recibo</button>
+    </footer>
+
+    <!-- Script para exibir a data atual -->
+    <script>
+        document.getElementById('current-date').textContent = new Date().toLocaleDateString();
+    </script>
+
+</body>
+
+</html>

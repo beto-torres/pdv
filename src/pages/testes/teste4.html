@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDV - Ponto de Venda</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="flex flex-col h-screen bg-gray-100">
+
+    <!-- Barra Lateral -->
+    <aside class="w-64 bg-gray-800 text-white h-screen fixed top-0 left-0 overflow-y-auto">
+        <div class="p-4">
+            <h2 class="text-xl font-bold mb-4">PDV</h2>
+            <nav>
+                <ul>
+                    <li class="mb-2">
+                        <a href="#" class="flex items-center p-2 rounded hover:bg-gray-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0l-2-2m2 2l2-2" />
+                            </svg>
+                            Início
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#" class="flex items-center p-2 rounded hover:bg-gray-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                            </svg>
+                            Produtos
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#" class="flex items-center p-2 rounded hover:bg-gray-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                            Transações
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+
+    <!-- Conteúdo Principal -->
+    <main class="ml-64 p-4 flex-grow overflow-y-auto">
+        <div class="bg-white rounded-lg shadow p-6">
+            <h1 class="text-2xl font-bold mb-4">Produtos Disponíveis</h1>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <!-- Card de Produto -->
+                <div class="bg-gray-50 p-4 rounded-lg shadow">
+                    <h2 class="font-bold">Produto 1</h2>
+                    <p class="text-gray-600">R$ 10,00</p>
+                    <button class="mt-2 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition">
+                        Adicionar
+                    </button>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg shadow">
+                    <h2 class="font-bold">Produto 2</h2>
+                    <p class="text-gray-600">R$ 15,00</p>
+                    <button class="mt-2 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition">
+                        Adicionar
+                    </button>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg shadow">
+                    <h2 class="font-bold">Produto 3</h2>
+                    <p class="text-gray-600">R$ 20,00</p>
+                    <button class="mt-2 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition">
+                        Adicionar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Rodapé com Resumo da Compra -->
+    <footer class="ml-64 p-4 bg-white border-t border-gray-200">
+        <div class="flex justify-between items-center">
+            <div>
+                <h2 class="font-bold">Resumo da Compra</h2>
+                <p>Total: R$ 0,00</p>
+            </div>
+            <button class="px-6 py-2 bg-green-500 text-white rounded hover:bg-green-600 transition">
+                Finalizar Compra
+            </button>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDV - Ponto de Venda</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="flex flex-col h-screen bg-gray-100">
+
+    <!-- Header -->
+    <header class="bg-white shadow p-4 flex items-center justify-between">
+        <h1 class="text-xl font-bold">PDV - Ponto de Venda</h1>
+        <div class="flex items-center space-x-4">
+            <button class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition">
+                Configurações
+            </button>
+            <button class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600 transition">
+                Sair
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex flex-grow overflow-hidden">
+
+        <!-- Sidebar -->
+        <aside class="w-72 bg-gray-800 text-white p-4 overflow-y-auto">
+            <input type="text" placeholder="Pesquisar produto..."
+                class="w-full px-3 py-2 mb-4 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <ul class="space-y-2">
+                <li>
+                    <button
+                        class="w-full flex items-center justify-between px-3 py-2 bg-gray-700 rounded hover:bg-gray-600 transition">
+                        Produto 1 <span class="text-gray-400">R$ 10,00</span>
+                    </button>
+                </li>
+                <li>
+                    <button
+                        class="w-full flex items-center justify-between px-3 py-2 bg-gray-700 rounded hover:bg-gray-600 transition">
+                        Produto 2 <span class="text-gray-400">R$ 15,00</span>
+                    </button>
+                </li>
+                <li>
+                    <button
+                        class="w-full flex items-center justify-between px-3 py-2 bg-gray-700 rounded hover:bg-gray-600 transition">
+                        Produto 3 <span class="text-gray-400">R$ 20,00</span>
+                    </button>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Cart Section -->
+        <section class="flex flex-col flex-grow p-4 overflow-y-auto">
+
+            <!-- Cart Items -->
+            <div class="flex-grow">
+                <h2 class="text-lg font-bold mb-4">Carrinho de Compras</h2>
+                <ul class="space-y-2">
+                    <li class="flex justify-between items-center bg-gray-100 p-3 rounded">
+                        <span>Produto 1</span>
+                        <div class="flex items-center space-x-2">
+                            <button
+                                class="px-2 py-1 bg-red-500 text-white rounded hover:bg-red-600 transition">-</button>
+                            <span>1</span>
+                            <button
+                                class="px-2 py-1 bg-green-500 text-white rounded hover:bg-green-600 transition">+</button>
+                            <span>R$ 10,00</span>
+                        </div>
+                    </li>
+                    <li class="flex justify-between items-center bg-gray-100 p-3 rounded">
+                        <span>Produto 2</span>
+                        <div class="flex items-center space-x-2">
+                            <button
+                                class="px-2 py-1 bg-red-500 text-white rounded hover:bg-red-600 transition">-</button>
+                            <span>2</span>
+                            <button
+                                class="px-2 py-1 bg-green-500 text-white rounded hover:bg-green-600 transition">+</button>
+                            <span>R$ 30,00</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Checkout Summary -->
+            <div class="mt-4 bg-white shadow p-4 rounded">
+                <div class="flex justify-between mb-2">
+                    <span>Subtotal:</span>
+                    <span>R$ 40,00</span>
+                </div>
+                <div class="flex justify-between mb-2">
+                    <span>Desconto:</span>
+                    <span>R$ 0,00</span>
+                </div>
+                <div class="flex justify-between font-bold">
+                    <span>Total:</span>
+                    <span>R$ 40,00</span>
+                </div>
+                <button class="w-full mt-4 px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 transition">
+                    Finalizar Compra
+                </button>
+            </div>
+        </section>
+    </main>
+
+</body>
+
+</html>

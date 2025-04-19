@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDV Mercadinho do Bairro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 font-sans">
+
+    <!-- Cabeçalho -->
+    <header class="bg-green-600 text-white py-4 px-6">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <img src="logo.png" alt="Logo do Mercadinho" class="w-12 h-12 rounded-full">
+                <h1 class="text-2xl font-bold">Mercadinho do Bairro</h1>
+            </div>
+            <nav class="hidden md:flex space-x-4">
+                <a href="#" class="hover:text-green-200">Início</a>
+                <a href="#" class="hover:text-green-200">Produtos</a>
+                <a href="#" class="hover:text-green-200">Categorias</a>
+                <a href="#" class="hover:text-green-200">Contato</a>
+            </nav>
+            <button class="md:hidden text-white focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Corpo -->
+    <main class="container mx-auto p-6">
+        <!-- Categorias -->
+        <section class="mb-8">
+            <h2 class="text-xl font-semibold mb-4">Categorias</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+                <div class="bg-white p-4 rounded-lg shadow-md text-center">
+                    <img src="frutas.png" alt="Frutas" class="w-16 h-16 mx-auto">
+                    <p class="mt-2">Frutas</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md text-center">
+                    <img src="verduras.png" alt="Verduras" class="w-16 h-16 mx-auto">
+                    <p class="mt-2">Verduras</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md text-center">
+                    <img src="carnes.png" alt="Carnes" class="w-16 h-16 mx-auto">
+                    <p class="mt-2">Carnes</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md text-center">
+                    <img src="bebidas.png" alt="Bebidas" class="w-16 h-16 mx-auto">
+                    <p class="mt-2">Bebidas</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md text-center">
+                    <img src="limpeza.png" alt="Limpeza" class="w-16 h-16 mx-auto">
+                    <p class="mt-2">Limpeza</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Produtos em Destaque -->
+        <section class="mb-8">
+            <h2 class="text-xl font-semibold mb-4">Produtos em Destaque</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <img src="produto1.jpg" alt="Produto 1" class="w-full h-48 object-cover rounded-md">
+                    <h3 class="text-lg font-semibold mt-2">Maçã Gala</h3>
+                    <p class="text-gray-600">R$ 5,99 / kg</p>
+                    <button class="mt-2 bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 w-full">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <img src="produto2.jpg" alt="Produto 2" class="w-full h-48 object-cover rounded-md">
+                    <h3 class="text-lg font-semibold mt-2">Carne Bovina</h3>
+                    <p class="text-gray-600">R$ 29,99 / kg</p>
+                    <button class="mt-2 bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 w-full">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <img src="produto3.jpg" alt="Produto 3" class="w-full h-48 object-cover rounded-md">
+                    <h3 class="text-lg font-semibold mt-2">Detergente Ypê</h3>
+                    <p class="text-gray-600">R$ 2,49</p>
+                    <button class="mt-2 bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 w-full">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Carrinho de Compras -->
+        <aside class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-xl font-semibold mb-4">Carrinho de Compras</h2>
+            <div class="space-y-4">
+                <div class="flex justify-between items-center">
+                    <p>Maçã Gala</p>
+                    <p>R$ 5,99</p>
+                </div>
+                <div class="flex justify-between items-center">
+                    <p>Carne Bovina</p>
+                    <p>R$ 29,99</p>
+                </div>
+                <div class="flex justify-between items-center">
+                    <p>Detergente Ypê</p>
+                    <p>R$ 2,49</p>
+                </div>
+                <div class="border-t border-gray-300 pt-4">
+                    <div class="flex justify-between font-semibold">
+                        <p>Total</p>
+                        <p>R$ 38,47</p>
+                    </div>
+                </div>
+                <button class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 w-full">
+                    Finalizar Compra
+                </button>
+            </div>
+        </aside>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="bg-green-600 text-white py-6 px-6 mt-8">
+        <div class="container mx-auto text-center">
+            <p class="text-sm">&copy; 2023 Mercadinho do Bairro. Todos os direitos reservados.</p>
+            <div class="mt-4">
+                <a href="#" class="text-white hover:text-green-200 mx-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                </a>
+                <a href="#" class="text-white hover:text-green-200 mx-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

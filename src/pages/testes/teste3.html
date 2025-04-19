@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDV - Mercadinho do Beto</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 h-screen flex flex-col">
+
+    <!-- Header -->
+    <header class="bg-blue-600 text-white p-4 flex justify-between items-center">
+        <h1 class="text-xl font-bold">Mercadinho do Beto</h1>
+        <div class="flex gap-2">
+            <button class="bg-blue-700 px-3 py-1 rounded-md hover:bg-blue-800">Logout</button>
+            <button class="bg-green-500 px-3 py-1 rounded-md hover:bg-green-600">Finalizar Venda</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1 flex overflow-hidden">
+        <!-- Sidebar Esquerda (Responsivo) -->
+        <aside id="sidebar" class="w-full md:w-1/3 bg-white border-r border-gray-300 p-4 flex flex-col gap-4">
+            <div class="flex flex-col gap-2">
+                <label for="barcode" class="font-semibold">Código de Barras:</label>
+                <input type="text" id="barcode" placeholder="Digite o código ou escaneie"
+                    class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-500">
+            </div>
+
+            <div class="flex flex-col gap-2">
+                <label class="font-semibold">Funções Rápidas:</label>
+                <div class="grid grid-cols-2 gap-2">
+                    <button class="bg-blue-500 text-white px-3 py-4 rounded-md hover:bg-blue-600">Desconto</button>
+                    <button class="bg-red-500 text-white px-3 py-4 rounded-md hover:bg-red-600">Cancelar Item</button>
+                    <button class="bg-yellow-500 text-black px-3 py-4 rounded-md hover:bg-yellow-600">Pesquisar
+                        Produto</button>
+                    <button class="bg-green-500 text-white px-3 py-4 rounded-md hover:bg-green-600">Adicionar
+                        Manualmente</button>
+                </div>
+            </div>
+
+            <div class="mt-auto">
+                <p class="text-sm text-gray-500">Versão 1.0.0</p>
+            </div>
+        </aside>
+
+        <!-- Painel Direito -->
+        <section class="flex-1 bg-white p-4 flex flex-col">
+            <!-- Título da Lista de Compras -->
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-lg font-bold">Lista de Compras</h2>
+                <p class="text-lg text-gray-700 font-bold">Total: <span id="total-value"
+                        class="text-2xl text-green-600">R$ 123,40</span></p>
+            </div>
+
+            <!-- Lista de Itens -->
+            <div class="flex-1 overflow-y-auto border border-gray-300 rounded-md p-4 bg-gray-50">
+                <table class="w-full text-left table-fixed">
+                    <thead>
+                        <tr class="border-b border-gray-300">
+                            <th class="w-1/12 pb-2 font-semibold text-center">#</th>
+                            <th class="w-5/12 pb-2 font-semibold">Produto</th>
+                            <th class="w-2/12 pb-2 font-semibold text-center">Quantidade</th>
+                            <th class="w-2/12 pb-2 font-semibold text-right">Preço Unitário</th>
+                            <th class="w-2/12 pb-2 font-semibold text-right">Subtotal
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="shopping-list" class="text-sm font-mono">
+                        <!-- Exemplo de itens -->
+                        <tr class="border-b border-gray-300">
+                            <td class="py-1 text-center">1</td>
+                            <td class="py-1">Arroz Tipo 1 (5kg)</td>
+                            <td class="py-1 text-center">1</td>
+                            <td class="py-1 text-right">R$ 25,90</td>
+                            <td class="py-1 text-right">R$ 25,90</td>
+                        </tr>
+                        <tr class="border-b border-gray-300">
+                            <td class="py-1 text-center">2</td>
+                            <td class="py-1">Feijão Preto (1kg)</td>
+                            <td class="py-1 text-center">2</td>
+                            <td class="py-1 text-right">R$ 12,50</td>
+                            <td class="py-1 text-right">R$ 25,00</td>
+                        </tr>
+                        <tr class="border-b border-gray-300">
+                            <td class="py-1 text-center">3</td>
+                            <td class="py-1">Macarrão Espaguete (500g)</td>
+                            <td class="py-1 text-center">3</td>
+                            <td class="py-1 text-right">R$ 4,50</td>
+                            <td class="py-1 text-right">R$ 13,50</td>
+                        </tr>
+                        <tr class="border-b border-gray-300">
+                            <td class="py-1 text-center">4</td>
+                            <td class="py-1">Óleo de Soja (900ml)</td>
+                            <td class="py-1 text-center">1</td>
+                            <td class="py-1 text-right">R$ 8,90</td>
+                            <td class="py-1 text-right">R$ 8,90</td>
+                        </tr>
+                        <tr class="border-b border-gray-300">
+                            <td class="py-1 text-center">5</td>
+                            <td class="py-1">Sabão em Pó (1kg)</td>
+                            <td class="py-1 text-center">2</td>
+                            <td class="py-1 text-right">R$ 15,00</td>
+                            <td class="py-1 text-right">R$ 30,00</td>
+                        </tr>
+                        <tr class="border-b border-gray-300">
+                            <td class="py-1 text-center">6</td>
+                            <td class="py-1">Papel Higiênico (4 rolos)</td>
+                            <td class="py-1 text-center">1</td>
+                            <td class="py-1 text-right">R$ 12,00</td>
+                            <td class="py-1 text-right">R$ 12,00</td>
+                        </tr>
+                        <!-- Mais itens podem ser adicionados aqui -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Rodapé da Lista -->
+            <div class="mt-4 flex justify-between items-center">
+                <button class="bg-blue-500 text-white px-3 py-2 rounded-md hover:bg-blue-600"
+                    onclick="printReceipt()">Imprimir Cupom</button>
+                <p class="text-sm text-gray-500">Itens: <span id="item-count" class="font-bold">6</span></p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal de Pagamento por PIX -->
+    <div id="pix-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+        <div class="bg-white p-6 rounded-md w-full max-w-md">
+            <h3 class="text-xl font-bold mb-4">Pagamento via PIX</h3>
+            <div class="flex flex-col items-center">
+                <img src="https://b2024479.smushcdn.com/2024479/wp-content/uploads/2020/05/HelloTech-qr-code-1024x1024.jpg?lossy=1&strip=1&webp=1"
+                    alt="QR Code" class="mb-4">
+                <p class="text-sm text-gray-600 mb-4">Valor: <span id="pix-total" class="font-bold text-green-600">R$
+                        123,40</span></p>
+                <button class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600"
+                    onclick="closePixModal()">Fechar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-200 p-2 text-center text-xs text-gray-500">
+        Desenvolvido por Mercadinho do Beto | Todos os direitos reservados
+    </footer>
+
+    <script>
+        // Função para imprimir cupom
+        function printReceipt() {
+            alert("Cupom impresso!");
+            // Aqui você pode adicionar a lógica real de impressão
+        }
+
+        // Função para abrir modal de pagamento por PIX
+        function openPixModal(total) {
+            document.getElementById('pix-modal').classList.remove('hidden');
+            document.getElementById('pix-total').textContent = `R$ ${total.toFixed(2)}`;
+        }
+
+        // Função para fechar modal de pagamento por PIX
+        function closePixModal() {
+            document.getElementById('pix-modal').classList.add('hidden');
+        }
+
+        // Simulação de finalização de venda com opção de PIX
+        document.querySelector('.bg-green-500').addEventListener('click', () => {
+            const total = 115.30; // Simulação de valor total
+            openPixModal(total);
+        });
+
+        // Contagem de itens na lista
+        const itemCount = document.querySelectorAll('#shopping-list tr').length;
+        document.getElementById('item-count').textContent = itemCount;
+
+        // Cálculo do valor total da venda
+        const subtotals = Array.from(document.querySelectorAll('#shopping-list td:last-child')).map(td => parseFloat(td.textContent.replace('R$ ', '').replace(',', '.')));
+        const totalValue = subtotals.reduce((sum, subtotal) => sum + subtotal, 0).toFixed(2);
+        document.getElementById('total-value').textContent = `R$ ${totalValue}`;
+    </script>
+</body>
+
+</html>
